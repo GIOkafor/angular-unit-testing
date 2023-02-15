@@ -1,6 +1,10 @@
 <div class="content">
   <span>{{ title }} app is running!</span>
-  <!--
-    <h4>{{size|fileSize:'MB'}}</h4>
-  -->
+
+  <h4>{{size?.value|fileSize:'MB'}}</h4>
+  
+  <p>Enter a number below to see the conversion!</p>
+  
+  <input type="number" [formControl]="size" placeholder="Enter a number">
+  <button (click)="size.reset()">Clear</button>
 </div>

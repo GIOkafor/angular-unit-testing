@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-unit-testing';
-  size = 2483534;
+  size = new FormControl();
 }
