@@ -3,6 +3,7 @@ describe('Use app', () => {
     cy.visit('/') 
   })
   it('it can enter numbers and clear the form', () => {
+    //if local use one or other
     cy.visit('/');
 
     const newItem = 1234567;
