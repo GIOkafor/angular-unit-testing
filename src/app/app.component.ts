@@ -9,4 +9,14 @@ import { FormControl } from '@angular/forms';
 export class AppComponent {
   title = 'angular-unit-testing';
   size = new FormControl();
+  entries: number[] = [];
+
+  constructor(){
+  }
+
+  save(value:number){
+    console.log({value});
+    this.entries.push(value);
+    console.log(this.entries);
+  }
 }
