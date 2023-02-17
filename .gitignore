@@ -40,3 +40,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+#Cypress config file(we don't want baseUrl changing between local environment and our remote repo)
+cypress.config.ts
