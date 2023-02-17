@@ -15,8 +15,8 @@ export class AppComponent {
   }
 
   save(value:number){
-    console.log({value});
+    //console.log({value});
     this.entries.push(value);
-    console.log(this.entries);
+    //console.log(this.entries);
   }
 }
