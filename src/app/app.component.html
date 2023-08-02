@@ -6,5 +6,18 @@
   <p>Enter a number below to see the conversion!</p>
   
   <input data-test="user-input" class="user_input" type="number" [formControl]="size" placeholder="Enter a number">
-  <button data-test="clear-button" (click)="size.reset()">Clear</button>
+  <button data-test="clear-button" (click)="size.reset()">Clear X</button>
+  <button data-test="save-button" [disabled]="!size.value" (click)="save(size.value)">Save </button>
+  
+  <hr>
+
+  <h4>History</h4>
+  <div data-test="past-entries">
+    <ul class="past_entries" *ngIf="entries.length > 0; else noHistory">
+      <li *ngFor="let entry of entries">{{entry}} => {{entry|fileSize:'MB'}} </li>
+    </ul>
+
+    <ng-template #noHistory class="no-history">No history yet, enter some numbers above to get started.</ng-template>
+  </div>
+  
 </div>
